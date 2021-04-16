@@ -1,9 +1,9 @@
 let username = prompt ("Qual é o seu nome?");
 
 function verifyName () {
-const requestname = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants",{name: username});
-requestname.then(setInterval(presenceControll, 5000))
-requestname.catch(repeatPrompt)
+    const requestname = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants",{name: username});
+    requestname.then(setInterval(presenceControll, 5000))
+    requestname.catch(repeatPrompt)
 }
 
 verifyName ();
@@ -56,17 +56,17 @@ function renderMessages (content) {
             </div>
             `
         }
-
-
         messages += messageContent;
         chat.innerHTML = messages;
-    } 
-        
 
-   
-
-
+    }     
+    automaticSroll ();
 }
 
 setInterval (getData,3000)
 
+function automaticSroll () {
+    const lastMessage = document.querySelector(".message:last-child");
+    lastMessage.scrollIntoView();
+    console.log(lastMessage)
+}

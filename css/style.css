@@ -88,3 +88,6 @@ input {
     display: none;
 }
 
+.message:last-child {
+    display: flex;
+}
