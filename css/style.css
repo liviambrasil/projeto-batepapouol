@@ -24,7 +24,7 @@ body {
     width: 42.19px;
     height: 30.94px;
 }
-.posts {
+.chat {
     margin: 96px 0 90px 0;
 }
 
@@ -36,9 +36,11 @@ body {
     font-size: 14px;
     font-weight: 400;
     margin: 0 0 4px 0;
-    background: #fff;
 }
 
+.white {
+    background: #fff;
+}
 .red {
     background: #FFDEDE;
 }
