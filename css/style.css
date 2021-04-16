@@ -2,7 +2,14 @@ body {
     font-family: 'Roboto', sans-serif;
     background: #f3f3f3;
     width: 100%;
+    display: flex;
 }
+
+.principal-page {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .top {
     width: 100%;
@@ -37,6 +44,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     margin: 0 0 4px 0;
+    word-break: break-all;
 }
 
 .white {

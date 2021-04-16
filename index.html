@@ -10,36 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="principal-page">
+        <div class="top">
+            <div class="topcontent">
+                <img src="img/logo 1.png" alt="logo do bate papo uol">
+                <ion-icon onclick="displaySidebar()" name="people"></ion-icon>
+            </div>
+        </div>
 
-    <div class="top">
-        <div class="topcontent">
-            <img src="img/logo 1.png" alt="logo do bate papo uol">
-            <ion-icon name="people"></ion-icon>
+        <div class="chat"> </div>
+
+        <div class="type">
+            <input placeholder="Escreva aqui..." type="text">
+            <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
         </div>
     </div>
-
-    <div class="chat">
-        <div class="message">
-            <p class=time>(hora)</p>
-            <p><span class=name>João</span> para <span class=name>Todos</span>: Oi, galera</p>
-        </div>
-        <div class="message red">
-            <p class=time>(hora)</p>
-            <p><span class=name>João</span> para <span class=name>Maria</span>: Oi, lindinha</p>
-        </div>
-        <div class="message gray">
-            <p class=time>(hora)</p>
-            <p><span class=name>João</span> entra na sala...</p>
-        </div>
-    </div>
-
-    <div class="type">
-        <input placeholder="Escreva aqui..." type="text">
-        <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
-    </div>
-
     <div class="sidebar hide">
-        <h1>Escolha um contato para enviar mensagem:</h1>
+        <div><h1>Escolha um contato para enviar mensagem:</h1></div>
         <div class="contactlist">
             <div class="everybody">
                 <ion-icon name="people"></ion-icon>

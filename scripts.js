@@ -85,3 +85,9 @@ function sendMessage () {
     verifyMessage.catch(window.location.reload);
 }
 
+function displaySidebar () {
+    let sidebar = document.querySelector(".sidebar");
+    sidebar.classList.remove("hide");
+    const principalPage = document.querySelector(".principal-page");
+    principalPage.classList.add("dark-filter");
+}
