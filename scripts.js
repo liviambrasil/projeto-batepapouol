@@ -86,9 +86,8 @@ function sendMessage () {
 }
 
 function displaySidebar () {
+    let filter = document.querySelector(".darkBackground");
     let sidebar = document.querySelector(".sidebar");
-    sidebar.classList.remove("hide");
-    sidebar.classList.add("display-sidebar")
-    const principalPage = document.querySelector(".principal-page");
-    principalPage.classList.add("dark-filter");
+    filter.classList.remove("hide");
+    sidebar.classList.add("display-sidebar");
 }

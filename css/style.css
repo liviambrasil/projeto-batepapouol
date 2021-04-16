@@ -120,6 +120,7 @@ input {
     display: flex;
     flex-direction: column;
     background: white;
+    width: 70%;
 }
 
 .sidebar-top {
@@ -148,4 +149,14 @@ input {
 .everybody ion-icon, .contact ion-icon, .public ion-icon, .private ion-con {
     width: 20px;
     height: 15px;
+}
+
+.darkBackground{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
 }
