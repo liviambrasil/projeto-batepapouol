@@ -30,7 +30,6 @@ function renderMessages (content) {
     const chat = document.querySelector(".chat");
     let messages;
 
-    console.log (content);
     for(i=0 ; i<content.data.length ; i++) {
 
         if (content.data[i].type === "status"){
@@ -69,7 +68,6 @@ setInterval (getData,3000)
 function automaticSroll () {
     const lastMessage = document.querySelector(".message:last-child");
     lastMessage.scrollIntoView();
-    console.log(lastMessage)
 }
 
 function sendMessage () {
@@ -90,4 +88,31 @@ function displaySidebar () {
     let sidebar = document.querySelector(".sidebar");
     filter.classList.remove("hide");
     sidebar.classList.add("display-sidebar");
+    console.log("foi");
+    getContacts();
+}
+
+function getContacts () {
+    let contacts = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants");
+    contacts.then(renderContacts);
+}
+
+function renderContacts (contactsData){
+    let contactList = document.querySelector(".contactlist");
+    let contact1 = "<!---->";
+    let usercontact;
+    
+    for (let i=0 ; i<contactsData.data.length; i++) {
+        usercontact = `
+            <div class="contact">
+                <ion-icon name="person-circle"></ion-icon>
+                <p>${contactsData.data[i].name}</p>
+            </div>`;
+
+    
+    contact1 += usercontact;
+    }
+
+contactList.innerHTML = contact1;
+console.log(contact1);
 }
