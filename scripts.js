@@ -1,4 +1,5 @@
 let username = prompt ("Qual é o seu nome?");
+let text = document.querySelector("input");
 
 function verifyName () {
     const requestname = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants",{name: username});
@@ -8,7 +9,7 @@ function verifyName () {
 
 verifyName ();
 
-function presenceControll (dataname) {
+function presenceControll () {
     axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/status", {name: username});
 }
 
@@ -72,11 +73,15 @@ function automaticSroll () {
 }
 
 function sendMessage () {
-    const text = document.querySelector("input");
-    axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/messages",
+    let verifyMessage = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/messages",
     {   from: `${username}`,
         to: "Todos",
         text: `${text.value}`,
         type: "message"
     })
+    text.value = "";
+
+    verifyMessage.then(getData);
+    verifyMessage.catch(window.location.reload);
 }
+
