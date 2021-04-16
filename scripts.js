@@ -70,3 +70,13 @@ function automaticSroll () {
     lastMessage.scrollIntoView();
     console.log(lastMessage)
 }
+
+function sendMessage () {
+    const text = document.querySelector("input");
+    axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/messages",
+    {   from: `${username}`,
+        to: "Todos",
+        text: `${text.value}`,
+        type: "message"
+    })
+}

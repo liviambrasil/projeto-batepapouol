@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background: #f3f3f3;
+    width: 100%;
 }
 
 .top {
@@ -52,6 +53,7 @@ body {
 .time {
     margin: 0 10px 0 8px;
     color: #AAAAAA;
+    box-sizing: border-box;
 }
 
 .name {
@@ -75,13 +77,15 @@ input {
     font-size: 18px;
     font-style: italic;
     color: #000;
-    margin-left: 17px;
+    padding-left: 17px;
+    width: 100%;
 }
 
 .type ion-icon {
     width: 26px;
     height: 26px;
-    margin-right: 18px;
+    padding-right: 18px;
+    box-sizing: border-box;
 }
 
 .hide {
